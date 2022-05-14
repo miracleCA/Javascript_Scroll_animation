@@ -1,0 +1,131 @@
+//Create HTML Nav menu element
+<section class="header">
+  <nav class="navbar navbar-inverse fixed-to-top" id="nav">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" id="togg-btn" class="navbar-toggle" style="border-color: #1e1c87; background-color: #ffffff;" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar" style="background-color: rgb(11, 11, 95);"></span>
+                        <span class="icon-bar" style="background-color: rgb(11, 11, 95);"></span>
+                        <span class="icon-bar" style="background-color: rgb(11, 11, 95);"></span>                        
+                </button>
+                <a class="navbar-brand" href="../">WebSiteName</a>
+              </div>
+              <div class="collapse navbar-collapse navbar-right" style="border: none;" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="" target="_blank" style="color: white;">Home</a></li>
+                  <li><a href="" target="_blank" style="color: white;">About Us</a></li>
+                  <li class="dropdown">
+                    <a id="active" class="dropdown-toggle" target="_blank" style="color: white;" href="">
+                      Services
+                      <span class="caret"></span></a>
+                    </a>
+                    <ul class="dropdown-menu" id="dropdown-menu" style="left: 0; height: max-content;">
+                      <li style="border-top: rgb(255, 255, 255) 1px solid;"><a class="dropdown-item" id="dropdown-item" href=""></a></li>
+                      <li style="border-top: rgb(255, 255, 255) 1px solid;"><a class="dropdown-item" target="_blank" id="dropdown-item" href="">Business Development</a></li>
+                      <li style="border-top: rgb(255, 255, 255) 1px solid; border-bottom: rgb(255, 255, 255) 1px solid;"><a class="dropdown-item" target="_blank" id="dropdown-item" href="">Writing</a></li>
+                    </ul>
+                  </li>     
+                  <li><a href="#" style="color: white;" target="_blank">Blogs</a></li>
+                  <li><a href="" style="color: white;" target="_blank">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+</section>
+
+
+//add a css styling to the nav menu
+.header nav{
+        position: fixed; 
+        width: inherit; 
+        background-color: transparent; 
+        z-index: 999; 
+        border: none;
+}
+.navbar-toggle {
+        border: 2px solid #1e1c87;
+}
+.icon-bar {
+        background-color: #1d1ec9;
+}
+li a{
+        font-family: aladin;
+        font-size: 20px;
+}
+li a:active{
+        border: 1px solid rgb(10, 10, 75);
+}
+#active{
+        border: 2px solid rgb(10, 10, 75); 
+}
+li a:hover{
+        font-size: 23px;
+}
+#dropdown-menu{
+        background-color: rgb(5, 5, 60);
+}
+.dropdown-toggle {
+        background-color: transparent;
+        color: white;
+        border: none;
+}
+.dropdown {
+        position: absolute;
+        display: block;
+}
+.dropdown:active .dropdown-toggle:active{
+        background-color: transparent;
+}
+.navbar-nav .dropdown-item{
+        color: white;
+}  
+.navbar-nav .dropdown-item:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(5, 5, 60);
+        border: white;
+}
+.dropdown:hover .dropdown-menu {
+        display: block;
+}
+.dropdown:target .dropdown-menu{
+        display: none;
+}  
+.dropdown:hover .dropdown-toggle {
+        background-color: transparent;
+}
+.dropdown-menu a:hover{
+        font-size: 23px;
+        background-color: transparent;
+}
+#header-space{
+        height: 220px;
+}
+#header-items{
+        padding-left: 40px;
+}
+
+
+<script>
+    //Get the nav and active class
+    var mybutton = document.getElementById("myBtn");
+    var Mynav = document.getElementById("nav");
+
+    // When the user scrolls down 550px from the top of the document, show the nav background color
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        Mynav.style.background = "rgb(5, 5, 60)";
+        document.getElementById("active").style.border = "2px solid white";
+      } 
+      else if (screen.width <= 699) {
+        Mynav.style.background = "transparent";
+        document.getElementById("active").style.border = "2px solid white"
+      }
+      else {
+            Mynav.style.background = "transparent";
+            document.getElementById("active").style.border = "2px solid rgb(10, 10, 75)"
+      }
+    }
+
+</script>
