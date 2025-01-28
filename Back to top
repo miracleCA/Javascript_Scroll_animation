@@ -17,7 +17,7 @@
         bottom: 20px;
         width: 60px;
         height: 60px;
-        border-radius: 10px;
+        border-radius: 12px;
         background-color: rgb(12, 12, 100);
         position: fixed;
         z-index: 1;
