@@ -6,15 +6,15 @@
 </div>
 
 
-//Add some css styling 
+//Add some css styling in it
   #myBtn{
         position: fixed;
         border: 2px solid white;
         color: white;
         cursor: pointer;
         right: 30px;
-        font-size: 30px;
-        bottom: 20px;
+        font-size: 29px;
+        bottom: 19px;
         width: 60px;
         height: 60px;
         border-radius: 10px;
@@ -51,5 +51,6 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
     
 </script> 
